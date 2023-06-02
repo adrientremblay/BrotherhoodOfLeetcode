@@ -1,43 +1,46 @@
-// Just some constants
 const LEETCODE_API_ENDPOINT = 'https://leetcode.com/graphql'
+
 const DAILY_CODING_CHALLENGE_QUERY = `
-query questionOfToday {
-	activeDailyCodingChallengeQuestion {
-		date
-		userStatus
-		link
-		question {
-			acRate
-			difficulty
-			freqBar
-			frontendQuestionId: questionFrontendId
-			isFavor
-			paidOnly: isPaidOnly
-			status
-			title
-			titleSlug
-			hasVideoSolution
-			hasSolution
-			topicTags {
-				name
-				id
-				slug
-			}
-		}
-	}
-}`
+query skillStats($username: String!) {
+  matchedUser(username: $username) {
+    tagProblemCounts {
+      advanced {
+        tagName
+        tagSlug
+        problemsSolved
+      }
+      intermediate {
+        tagName
+        tagSlug
+        problemsSolved
+      }
+      fundamental {
+        tagName
+        tagSlug
+        problemsSolved
+      }
+    }
+  }
+}
+`
 
 // We can pass the JSON response as an object to our createTodoistTask later.
 const fetchDailyCodingChallenge = async () => {
     console.log(`Fetching daily coding challenge from LeetCode API.`)
 
-    const init = {
+    const request = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: DAILY_CODING_CHALLENGE_QUERY }),
+        body: JSON.stringify({
+            query: DAILY_CODING_CHALLENGE_QUERY,
+            variables: `{
+                "username": "adrientremblay"
+            }`, 
+
+        }),
     }
 
-    const response = await fetch(LEETCODE_API_ENDPOINT, init)
+    const response = await fetch(LEETCODE_API_ENDPOINT, request)
     return response.json()
 }
 
