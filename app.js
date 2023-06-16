@@ -20,6 +20,7 @@ query userProblemsSolved($username: String!) {
     }
   }
 `;
+
 const fetchUserData = async (username) => {
     console.log(`Fetching daily coding challenge from LeetCode API.`)
 
