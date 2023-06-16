@@ -41,13 +41,21 @@ const fetchUserData = async (username) => {
 }
 
 const extractProblemSolvedData = async (username) => {
-  const userData = await fetchUserData("adrientremblay");
-  console.log(JSON.stringify(userData));
-  /*
-  const fetchUserData("adrientremblay").then((result) => {
-    console.log(JSON.stringify(result));
-  });
-  */
+  const userData = await fetchUserData(username);
+  //console.log(JSON.stringify(userData));
+  
+  const problemData = userData.data.matchedUser.submitStatsGlobal.acSubmissionNum;
+
+  let result = {
+    totalCount : problemData[0].count,
+    easyCount : problemData[1].count,
+    medCount : problemData[2].count,
+    hardCount : problemData[3].count
+  };
+
+  return result;
 }
 
-extractProblemSolvedData("adrientremblay");
+extractProblemSolvedData("adrientremblay").then(results => {
+  console.log(results);
+})
