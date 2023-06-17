@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Avatar from './avatar';
 
 function MyButton() {
   return (
@@ -9,7 +10,9 @@ function MyButton() {
 export default function Home() {
   return (
     <main>
+      <h1>Welcome to my app</h1>
       <MyButton />
+      <Avatar />
     </main>
   )
 }
