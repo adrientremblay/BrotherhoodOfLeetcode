@@ -4,7 +4,7 @@ const user = {
     imageSize: 90,
   };
 
-export default function Avatar() {
+export default function Avatar(props) {
     return (
         <div>
             <h3>{user.name}</h3>
