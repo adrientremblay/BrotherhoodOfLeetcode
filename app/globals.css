@@ -3,11 +3,31 @@
 }
 
 .rankTable {
-    border: 2px solid black;
+    border-collapse: collapse;
 }
 
 .rankTable td {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+}
+
+.content {
     border: 2px solid black;
-    width: 200px;
-    height: 200px;
+}
+
+.line {
+    position: relative;
+    border: 2px solid red;
+}
+
+.horizontal-line {
+    height: 0px;
+    width: 100%;
+}
+
+.vertical-line {
+    width: 0px;
+    height: 100%;
+    margin: 0px auto;
 }
