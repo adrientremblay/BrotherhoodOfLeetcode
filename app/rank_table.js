@@ -15,9 +15,12 @@ export default function RankTable() {
                     </td>
                     <td>
                         <div className="line horizontal-line"></div>
+                        <div className="line vertical-line"></div>
+                    </td>
+                    <td>
+                        <div style={{left: "0"}} className="line horizontal-line half half-h"></div>
                         <div className="line vertical-line half half-v"></div>
                     </td>
-                    <td></td>
                 </tr>
                 <tr>
                     <td>
