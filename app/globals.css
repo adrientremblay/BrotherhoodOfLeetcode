@@ -3,17 +3,10 @@
 }
 
 .rankTable {
-    border-collapse: collapse;
-}
-
-.rankTable td {
-    width: 100px;
-    height: 100px;
-    padding: 0;
+    margin: 0px auto;
 }
 
 .content {
-    border: 2px solid black;
 }
 
 .line {
@@ -36,6 +29,10 @@
 
 td {
     position: relative;
+    border-radius: 50%;
+    width: 300px;
+    height: 150px;
+    margin: 20px;
 }
 
 .half {
@@ -53,4 +50,9 @@ td {
 
 .rank {
     text-align: center;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0px auto;
 }
