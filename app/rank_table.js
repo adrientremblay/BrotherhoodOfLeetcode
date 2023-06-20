@@ -1,3 +1,4 @@
+
 export default function RankTable() {
     return (
         <table className="rankTable">
@@ -7,8 +8,14 @@ export default function RankTable() {
                 <td className="content"></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
+                <td>
+                    <div style={{position: "absolute", width: "50%", top: "50%", left: "50%"}} className="line horizontal-line"></div>
+                    <div style={{position: "absolute", height: "50%", top: "50%", left: "50%"}} className="line vertical-line"></div>
+                </td>
+                <td>
+                    <div className="line vertical-line"></div>
+                    <div className="overlay line horizontal-line"></div>
+                </td>
                 <td></td>
             </tr>
             <tr>
