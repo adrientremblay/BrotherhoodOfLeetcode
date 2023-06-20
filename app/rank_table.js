@@ -10,12 +10,12 @@ export default function RankTable() {
                 </tr>
                 <tr>
                     <td>
-                        <div style={{position: "absolute", width: "50%", top: "50%", left: "50%"}} className="line horizontal-line"></div>
-                        <div style={{position: "absolute", height: "50%", top: "50%", left: "50%"}} className="line vertical-line"></div>
+                        <div className="line horizontal-line half half-h"></div>
+                        <div className="line vertical-line half half-v"></div>
                     </td>
                     <td>
-                        <div className="line vertical-line"></div>
-                        <div className="overlay line horizontal-line"></div>
+                        <div className="line horizontal-line"></div>
+                        <div className="line vertical-line half half-v"></div>
                     </td>
                     <td></td>
                 </tr>

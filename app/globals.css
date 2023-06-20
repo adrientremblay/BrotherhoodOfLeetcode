@@ -18,7 +18,7 @@
 
 .line {
     border: 2px solid red;
-    position: "absolute";
+    position: absolute;
 }
 
 .horizontal-line {
@@ -34,4 +34,17 @@
 
 td {
     position: relative;
+}
+
+.half {
+    left: 50%;
+    top: 50%;
+}
+
+.half-v {
+    height: 50%;
+}
+
+.half-h {
+    width: 50%;
 }
