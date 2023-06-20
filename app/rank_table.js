@@ -6,9 +6,7 @@ export default function RankTable() {
             <tbody>
                 <tr>
                     <td></td>
-                    <td className="content">
-                        <Rank name="Squire" number="10" difficulty="Questions"></Rank>
-                    </td>
+                    <td className="content"><Rank name="Squire" number="10" difficulty="Questions"></Rank></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -26,31 +24,14 @@ export default function RankTable() {
                     </td>
                 </tr>
                 <tr>
-                    <td className="content">
-                        <Rank name="Apprentice" number="15" difficulty="Easies"></Rank>
-                    </td>
-                    <td className="content">
-                        <Rank name="Initiate" number="12" difficulty="Mediums"></Rank>
-                    </td>
-                    <td className="content">
-                        <Rank name="Hero" number="1" difficulty="Hards"></Rank>
-                    </td>
+                    <td className="content"><Rank name="Apprentice" number="15" difficulty="Easies"></Rank></td>
+                    <td className="content"><Rank name="Initiate" number="12" difficulty="Mediums"></Rank></td>
+                    <td className="content"><Rank name="Hero" number="1" difficulty="Hards"></Rank></td>
                 </tr>
                 <tr>
-                    <td>
-                        <div className="line vertical-line"></div>
-                    </td>
-                    <td>
-                        <div className="line vertical-line"></div>
-                    </td>
-                    <td>
-                        <div className="line vertical-line"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td className="content">1</td>
-                    <td className="content">2</td>
-                    <td className="content">3</td>
+                    <td><div className="line vertical-line"></div></td>
+                    <td><div className="line vertical-line"></div></td>
+                    <td><div className="line vertical-line"></div></td>
                 </tr>
             </tbody>
         </table>
