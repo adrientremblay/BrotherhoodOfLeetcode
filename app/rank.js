@@ -1,7 +1,8 @@
 export default function Rank(props) {
     return (
-        <div>
+        <div class="rank">
             <h3>{props.name}</h3>
+            <span>{props.number} {props.difficulty} completed.</span>
         </div>
     );
 }
