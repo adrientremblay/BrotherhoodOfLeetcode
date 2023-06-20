@@ -45,11 +45,17 @@ let users = [user];
 
 export default function RankTable() {
     let orders_jsx = orders.map(order => {
-        let rank_list = order.ranks.map(rank => {
-            return (
+        let rank_list = [];
+
+        for (let i = 0 ; i < order.ranks.length ; i++) {
+            const rank = order.ranks[i];
+            rank_list.push(
                 <Rank name={rank.name}></Rank>
             );
-        });
+            if (i < order.ranks.length -1) {
+                rank_list.push(<div className='line vertical-line'></div>)
+            }
+        }
 
         return (
             <div class='order'>
