@@ -1,3 +1,4 @@
+import Rank from './rank';
 
 export default function RankTable() {
     return (
@@ -5,7 +6,9 @@ export default function RankTable() {
             <tbody>
                 <tr>
                     <td></td>
-                    <td className="content">Squire</td>
+                    <td className="content">
+                        <Rank name="Squire"></Rank>
+                    </td>
                     <td className="content"></td>
                 </tr>
                 <tr>
