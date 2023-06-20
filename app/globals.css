@@ -55,4 +55,8 @@ td {
     width: 150px;
     height: 150px;
     margin: 0px auto;
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    flex-direction: column;
 }
