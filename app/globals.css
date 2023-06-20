@@ -60,3 +60,14 @@ td {
     justify-content: center; /* Horizontal alignment */
     flex-direction: column;
 }
+
+.orders {
+
+}
+
+.order {
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    flex-direction: column;
+}

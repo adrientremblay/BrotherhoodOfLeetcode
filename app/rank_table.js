@@ -11,10 +11,59 @@ const user = {
     }
 };
 
+const orders = [
+    {
+        orderName: 'Scribes Of Simplicity',
+        difficultyName: 'Easy',
+        ranks: [
+            {name: 'Apprentice', problems: 15},
+            {name: 'Journeyman', problems: 30},
+            {name: 'Scribe', problems: 60},
+        ]
+    },
+    {
+        orderName: 'Knights Of Knotty Solutions',
+        difficultyName: 'Medium',
+        ranks: [
+            {name: 'Initiate', problems: 12},
+            {name: 'Aspirant', problems: 24},
+            {name: 'Warrior', problems: 36},
+        ]
+    },
+    {
+        orderName: 'Deities Of Difficult Dilemmas',
+        difficultyName: 'Hard',
+        ranks: [
+            {name: 'Hero', problems: 1},
+            {name: 'Champion', problems: 5},
+            {name: 'Legend', problems: 10},
+        ]
+    },
+]
+
 let users = [user];
 
 export default function RankTable() {
+    let orders_jsx = orders.map(order => {
+        let rank_list = order.ranks.map(rank => {
+            return (
+                <Rank name={rank.name}></Rank>
+            );
+        });
+
+        return (<div class='order'>
+            {rank_list}
+        </div>);
+    })
+
     return (
+        <div>
+            orders
+            {orders_jsx}
+        </div>
+    );
+}
+/*
         <table className="rankTable">
             <tbody>
                 <tr>
@@ -37,9 +86,9 @@ export default function RankTable() {
                     </td>
                 </tr>
                 <tr>
-                    <td className="content"><Rank name="Apprentice" number="15" difficulty="Easies" users={users}></Rank></td>
-                    <td className="content"><Rank name="Initiate" number="12" difficulty="Mediums" users={users}></Rank></td>
-                    <td className="content"><Rank name="Hero" number="1" difficulty="Hards" users={users}></Rank></td>
+                    <td className="content"><Rank name="Apprentice" number={15} difficulty="Easies" users={users}></Rank></td>
+                    <td className="content"><Rank name="Initiate" number={12} difficulty="Mediums" users={users}></Rank></td>
+                    <td className="content"><Rank name="Hero" number={1} difficulty="Hards" users={users}></Rank></td>
                 </tr>
                 <tr>
                     <td><div className="line vertical-line"></div></td>
@@ -103,5 +152,5 @@ export default function RankTable() {
                 </tr>
             </tbody>
         </table>
-    );
-}
+
+*/
