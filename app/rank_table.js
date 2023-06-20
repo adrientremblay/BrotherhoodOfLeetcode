@@ -51,15 +51,20 @@ export default function RankTable() {
             );
         });
 
-        return (<div class='order'>
-            {rank_list}
-        </div>);
+        return (
+            <div class='order'>
+                <h3>{order.orderName}: {order.difficultyName}</h3>
+                {rank_list}
+            </div>
+        );
     })
 
     return (
         <div>
-            orders
-            {orders_jsx}
+            <h2>orders</h2>
+            <div className='orders'>
+                {orders_jsx}
+            </div>
         </div>
     );
 }

@@ -62,7 +62,10 @@ td {
 }
 
 .orders {
-
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    flex-direction: row;
 }
 
 .order {
