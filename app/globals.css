@@ -73,3 +73,21 @@ td {
     justify-content: center; /* Horizontal alignment */
     flex-direction: column;
 }
+
+.orderMembers{
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    flex-direction: column;
+    width: 50px;
+    height: 150px;
+    border: 2px solid black;
+}
+
+.rankContainer{
+    display: flex;
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    flex-direction: row;
+    transform: translate(25px, 0);
+}

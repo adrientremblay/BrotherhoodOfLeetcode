@@ -49,8 +49,11 @@ export default function RankTable() {
 
         for (let i = 0 ; i < order.ranks.length ; i++) {
             const rank = order.ranks[i];
+
+            let users_at_this_rank = [user];
+
             rank_list.push(
-                <Rank name={rank.name}></Rank>
+                <Rank name={rank.name} users={users_at_this_rank}></Rank>
             );
             if (i < order.ranks.length -1) {
                 rank_list.push(<div className='line vertical-line'></div>)
